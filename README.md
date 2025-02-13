@@ -33,19 +33,19 @@ For a detailed running of the program, watch: https://www.youtube.com/watch?v=2I
 - Data Structures: Lists, sets, and maps for managing world entities.
 
 ## Project Structure: 
-|-- src
-|   |-- Location.java        # Represents a coordinate in the world grid
-|   |-- World.java           # Manages world generation and connectivity
-|   |-- Room.java            # Defines rooms within the world
-|   |-- Menu.java            # Handles UI interactions and seed input
-|   |-- MenuListen.java      # Listens for user inputs in the menu
-|   |-- Renderer.java        # Draws the world using StdDraw
-|   |-- Player.java          # Represents the player character
-|   |-- Duck.java            # Represents an enemy NPC
-|   |-- Collectable.java     # Represents items the player can collect
-|   |-- Listener.java        # Handles user input for movement
-|   |-- Verify.java          # Ensures room placement validity
-|-- bin                     # Compiled files
-|-- data                    # Saved game data
-|-- README.md               # Documentation
+              |-- src
+              |   |-- Location.java        # Represents a coordinate in the world grid
+              |   |-- World.java           # Manages world generation and connectivity
+              |   |-- Room.java            # Defines rooms within the world
+              |   |-- Menu.java            # Handles UI interactions and seed input
+              |   |-- MenuListen.java      # Listens for user inputs in the menu
+              |   |-- Renderer.java        # Draws the world using StdDraw
+              |   |-- Player.java          # Represents the player character
+              |   |-- Duck.java            # Represents an enemy NPC
+              |   |-- Collectable.java     # Represents items the player can collect
+              |   |-- Listener.java        # Handles user input for movement
+              |   |-- Verify.java          # Ensures room placement validity
+              |-- bin                     # Compiled files
+              |-- data                    # Saved game data
+              |-- README.md               # Documentation
 
