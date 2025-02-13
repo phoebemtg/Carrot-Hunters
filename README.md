@@ -33,19 +33,42 @@ For a detailed running of the program, watch: https://www.youtube.com/watch?v=2I
 - Data Structures: Lists, sets, and maps for managing world entities.
 
 ## Project Structure: 
-              |-- src
-              |   |-- Location.java        # Represents a coordinate in the world grid
-              |   |-- World.java           # Manages world generation and connectivity
-              |   |-- Room.java            # Defines rooms within the world
-              |   |-- Menu.java            # Handles UI interactions and seed input
-              |   |-- MenuListen.java      # Listens for user inputs in the menu
-              |   |-- Renderer.java        # Draws the world using StdDraw
-              |   |-- Player.java          # Represents the player character
-              |   |-- Duck.java            # Represents an enemy NPC
-              |   |-- Collectable.java     # Represents items the player can collect
-              |   |-- Listener.java        # Handles user input for movement
-              |   |-- Verify.java          # Ensures room placement validity
-              |-- bin                     # Compiled files
-              |-- data                    # Saved game data
-              |-- README.md               # Documentation
+
+       |-- src
+       |   |-- Location.java        # Represents a coordinate in the world grid
+       |   |-- World.java           # Manages world generation and connectivity
+       |   |-- Room.java            # Defines rooms within the world
+       |   |-- Menu.java            # Handles UI interactions and seed input
+       |   |-- MenuListen.java      # Listens for user inputs in the menu
+       |   |-- Renderer.java        # Draws the world using StdDraw
+       |   |-- Player.java          # Represents the player character
+       |   |-- Duck.java            # Represents an enemy NPC
+       |   |-- Collectable.java     # Represents items the player can collect
+       |   |-- Listener.java        # Handles user input for movement
+       |   |-- Verify.java          # Ensures room placement validity
+       |-- bin                     # Compiled files
+       |-- data                    # Saved game data
+       |-- README.md               # Documentation
+
+## Algorithms
+### User Input Acquisition
+1. Store input string in the format N#S.
+2. Use this string to seed the random number generator.
+
+### World Generation
+1. Create an empty grid of locations.
+2. Generate a random number of rooms with random dimensions and locations.
+3. Ensure rooms do not overlap and remain within grid bounds.
+4. Store room edge locations for hallway placement.
+5. Use a weighted quick union to track connected locations.
+6. Connect rooms using hallways with an algorithm that:
+- Selects two random rooms and finds their closest points.
+- Creates a horizontal and vertical path to connect them.
+- Adds hallway locations to the walkable list and the weighted quick union.
+7. Identify wall locations by surrounding walkable tiles with barriers.
+
+### Rendering the World
+1. Assign graphical tiles to different locations.
+2. Draw the world using StdDraw.
+3. Update the display as the player moves.
 
