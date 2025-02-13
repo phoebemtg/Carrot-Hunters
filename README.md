@@ -72,3 +72,5 @@ For a detailed running of the program, watch: https://www.youtube.com/watch?v=2I
 2. Draw the world using StdDraw.
 3. Update the display as the player moves.
 
+## References: 
+Project spec: https://fa20.datastructur.es/materials/proj/proj3/proj3
